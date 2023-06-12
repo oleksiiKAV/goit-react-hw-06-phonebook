@@ -11,7 +11,7 @@ const ContactList = () => {
   const filter = useSelector(state => state.phoneBook.filter);
 
   const showContacts = () => {
-    if (filter === '') return contacts;
+    // if (filter === '') return contacts; - ця умова непотрібна. Фільтр і так поверне вихідний масив
     return contacts.filter(el =>
       el.name.toLowerCase().includes(filter.toLowerCase())
     );

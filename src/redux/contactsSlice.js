@@ -1,7 +1,9 @@
 const { createSlice, nanoid } = require('@reduxjs/toolkit');
 // get contacts
+// JSON.parse(localStorage.getItem('contacts')) ?? [] 
+//" таке вже не робимо, це за нас робить персіст. Просто залишіть пустий масив"
 const initialState = {
-  contacts: JSON.parse(localStorage.getItem('contacts')) ?? [],
+  contacts: [],
   filter: '',
 };
 
